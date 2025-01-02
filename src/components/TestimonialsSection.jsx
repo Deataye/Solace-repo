@@ -5,7 +5,7 @@ import TestimonialsSectionbg3 from '../assets/TestimonialsSectionbg3.png';
 import Profile1 from '../assets/Profile1.png';
 import Profile2 from '../assets/Profile2.png';
 import Profile3 from '../assets/Profile3.png';
-import Star from '../assets/star.png'
+
 
 const TestimonialsSection = () => {
   const testimonials = [
