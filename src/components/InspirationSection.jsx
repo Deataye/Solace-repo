@@ -33,12 +33,12 @@ const InspirationSection = () => {
             </div>
           </div>
 
-          {/* Second Section */}
-          <div className="flex flex-col lg:flex-row items-center  lg:items-start gap-10">
+          {/* Second Section */} 
+          <div className="flex flex-col lg:flex-row items-center w-[1250px] lg:items-start gap-10">
             {/* Content */}
             <div className="bg-transparent border border-custom-gray p-6 rounded-[25px]   lg:w-[790px]">
               <h2 
-                className="text-[#1C4166] font-gidugu font-normal text-3xl  lg:text-[70px] lg:leading-[129.79px] lg:w-[755px] mb-4"
+                className="text-[#1C4166] font-gidugu font-normal text-3xl   lg:text-[70px] lg:leading-[129.79px] lg:w-[755px] mb-4"
               >
                 Embark on a Stylish Living Experience
               </h2>
@@ -50,7 +50,8 @@ const InspirationSection = () => {
               </p>
             </div>
             {/* Image */}
-            <div className="relative lg:w-[520px] lg:h-[411.02px] ">
+            <div className=" 
+             lg:w-[520px] lg:h-[511.02px] ">
               <img
                 src={InspirationSection2}
                 alt="Modern blue armchair"
