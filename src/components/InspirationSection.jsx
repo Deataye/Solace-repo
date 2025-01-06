@@ -5,8 +5,8 @@ import InspirationSection2 from '../assets/InspirationSection2.png';
 const InspirationSection = () => {
   return (
     <div className="bg-[rgba(216,224,233,1)] pt-32  lg:pt-40 pb-0  ">
-      <div className="container mx-auto px-4 ">
-        <div className="flex flex-col gap-12">
+      <div className="container mx-48  ">
+        <div className="flex flex-col ">
           {/* First Section */}
           <div className="flex flex-col lg:flex-row items-center  lg:items-start  lg:gap-6">
             {/* Image */}

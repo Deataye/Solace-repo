@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
     <div className="bg-[rgba(216,224,233,1)] w-full pb-[64px]">
       <div className="container mx-auto px-4">
         <div className="mb-20 flex justify-center">
-          <div className="bg-[#1C4166] text-[rgba(217,217,217,1)] py-3 px-8 rounded-[20px] inline-block">
+          <div className="bg-[#1C4166] text-[rgba(217,217,217,1)]  px-8 rounded-[20px] inline-block">
             <h2 className="lg:text-[65px] text-3xl leading-relaxed font-gidugu font-normal">What our customers say about us</h2>
           </div>
         </div>
@@ -105,7 +105,7 @@ const TestimonialsSection = () => {
                     fontFamily: 'Gidugu, sans-serif',
                     fontWeight: 400,
                     fontSize: '30px',
-                    lineHeight: '55.62px',
+                    lineHeight: '35.62px',
                   }}
                 >
                   {testimonial.name}
@@ -126,7 +126,7 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        <div className="bg-[#1C4166] lg:w-full  lg:h-[140px] overflow-hidden relative">
+        <div className="bg-[#1C4166] lg:min-w-full  lg:h-[140px] overflow-hidden relative">
           <div
             className="flex  whitespace-nowrap transition-transform duration-500"
             style={{ transform: `translateX(${translateX}px)` }}
@@ -139,7 +139,7 @@ const TestimonialsSection = () => {
               >
                
                 <h1 className='text-white font-gidugu font-normal lg:text-[80px] lg:leading-[148.62px] '>{product}</h1>
-                <img src={Star} alt="Star" className="h-16 w-16 lg:mx-32 " />
+                <img src={Star} alt="Star" className="h-16 w-16 lg:mx-24 " />
                
                 
               </div>

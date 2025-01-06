@@ -29,12 +29,12 @@ const Hero = () => {
             COMFORT
           </h1>
           <p 
-            className="text-white lg:text-[50px] text-2xl text-center ml-36 lg:ml-96 font-gidugu mt-0"
+            className="text-white lg:text-[50px] text-2xl w-full text-center ml-36 lg:ml-[250px] font-gidugu mt-0"
             style={{ lineHeight: 'lg:92.7px' }}
           >
             Explore Our Seating Collection
           </p>
-          <div className="lg:mt-20 ">
+          <div className="lg:py-48 ">
             <button
               className="text-white lg:text-[50px] text-4xl font-gidugu border-b-2 border-yellow-500 hover:text-yellow-500 transition-colors pb-2"
             >
