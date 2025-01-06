@@ -30,7 +30,7 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-12 gap-6">
           {/* Services Column */}
-          <div className="col-span-12 md:col-span-4 w-[299px] space-y-6">
+          <div className="col-span-12 md:col-span-4 lg:w-[299px] space-y-6">
             {services.map((service, index) => (
               <div key={index} className="bg-transparent border border-black rounded-3xl ">
                 <div className="flex flex-col bg-[#F9F9F9D6] my-4 py-4 border border-[#0000004D] rounded-[31px] items-center text-center">
@@ -49,10 +49,10 @@ const FeaturesSection = () => {
           </div>
 
           {/* Images Grid */}
-          <div className="col-span-12  w-[110%] overflow-hidden md:col-span-8">
-            <div className="grid grid-cols-2 h-full">
+          <div className="col-span-12  lg:w-[110%] overflow-hidden md:col-span-8">
+            <div className="grid g lg:grid-cols-2 lg:h-full">
               {/* Center Image */}
-              <div className="rounded-[40px] border border-[#1C4166] my-32 mx-10 overflow-hidden w-[281px] h-[408px]">
+              <div className="rounded-[40px] border border-[#1C4166] my-10 lg:my-32 lg:mx-10 overflow-hidden w-[340px] h-[250px] lg:w-[281px] lg:h-[408px]">
                 <img
                   src={FeaturesSection1}
                   alt="Blue dining chair"
@@ -62,14 +62,14 @@ const FeaturesSection = () => {
 
               {/* Right Column Images */}
               <div className="space-y-6">
-                <div className="rounded-[40px] border border-[#1C4166] relative right-24 overflow-hidden w-[350px] h-[369px]">
+                <div className="rounded-[40px] border border-[#1C4166] relative  lg:right-24 overflow-hidden w-[340px] h-[250px] lg:w-[350px] lg:h-[369px]">
                   <img
                     src={FeaturesSection2}
                     alt="Orange accent chair"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="rounded-[40px] border border-[#1C4166]  overflow-hidden w-full relative right-6 h-[182px]">
+                <div className="rounded-[40px] border border-[#1C4166]  overflow-hidden lg:w-full relative w-[340px] h-[250px] lg:right-6 lg:h-[182px]">
                   <img
                     src={FeaturesSection3}
                     alt="Gray sofa"

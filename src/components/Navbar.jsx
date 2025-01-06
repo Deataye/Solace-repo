@@ -1,48 +1,47 @@
 import React, { useState } from 'react';
-import Logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent">
-      <div className="container mx-auto flex justify-between items-center px-0 py-4">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
+      <div className="container mx-auto flex justify-between items-center px-4 py-4">
         {/* Logo */}
-        <div className='w-[233px] h-[57px] top-[25px]  p-[10px] '>
-          <p className=' font-diplomata text-white font-normal text-[30px] leading-[36.51px]'>
-          SOLACE
+        <div className="flex-shrink-0">
+          <p className="font-diplomata text-white text-xl sm:text-2xl md:text-3xl">
+            SOLACE
           </p>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex justify-center text-[40px] leading-[74.16px] items-center gap-[94px] flex-1">
+        <div className="hidden lg:flex justify-center items-center gap-8 xl:gap-16 flex-1">
           <a
             href="#"
-            className="font-gidugu text-white border-b-2 border-yellow-500"
+            className="font-gidugu text-white text-2xl xl:text-4xl border-b-2 border-yellow-500 transition-colors duration-300"
           >
             Home
           </a>
           <a
             href="#"
-            className="font-gidugu text-white hover:text-yellow-500"
+            className="font-gidugu text-white text-2xl xl:text-4xl hover:text-yellow-500 transition-colors duration-300"
           >
             Blog
           </a>
           <a
             href="#"
-            className="font-gidugu text-white hover:text-yellow-500"
+            className="font-gidugu text-white text-2xl xl:text-4xl hover:text-yellow-500 transition-colors duration-300"
           >
             Contact us
           </a>
         </div>
 
         {/* Search Bar */}
-        <div className="hidden md:flex">
-          <div className="relative w-[175px]">
+        <div className="hidden lg:flex flex-shrink-0">
+          <div className="relative w-36 xl:w-44">
             <input
               type="text"
               placeholder="Search"
-              className="bg-transparent font-inter border-b border-yellow-500 px-2 py-4 w-[175px] text-yellow-500 placeholder-yellow-500 focus:outline-none text-[15px] leading-[18.15px]"
+              className="bg-transparent font-inter border-b border-yellow-500 px-2 py-2 w-full text-yellow-500 placeholder-yellow-500 focus:outline-none text-sm"
             />
             <button className="absolute right-0 top-1/2 -translate-y-1/2">
               <svg
@@ -65,8 +64,9 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="lg:hidden text-white p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -79,30 +79,34 @@ const Navbar = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d="M4 6h16M4 12h16m-16 6h16"
+              d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-16 6h16"}
             />
           </svg>
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden  mt-2 space-y-3 px-6 bg-gray-900 py-4">
+      <div 
+        className={`lg:hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        }`}
+      >
+        <div className="bg-gray-900 px-4 py-6 space-y-4">
           <a
             href="#"
-            className="block text-white border-b-2 border-yellow-500 py-2"
+            className="block text-white text-lg border-b-2 border-yellow-500 py-2 transition-colors duration-300"
           >
             Home
           </a>
           <a
             href="#"
-            className="block text-white hover:text-yellow-500 py-2"
+            className="block text-white text-lg hover:text-yellow-500 py-2 transition-colors duration-300"
           >
             Blog
           </a>
           <a
             href="#"
-            className="block text-white hover:text-yellow-500 py-2"
+            className="block text-white text-lg hover:text-yellow-500 py-2 transition-colors duration-300"
           >
             Contact us
           </a>
@@ -110,9 +114,9 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search"
-              className="w-full bg-transparent border-b border-yellow-500 px-2 py-1 text-white placeholder-gray-400 focus:outline-none text-sm"
+              className="w-full bg-transparent border-b border-yellow-500 px-2 py-2 text-white placeholder-yellow-500 focus:outline-none text-sm"
             />
-            <button className="absolute right-0 top-1/2 -translate-y-1/2">
+            <button className="absolute right-2 top-1/2 -translate-y-1/2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 text-yellow-500"
@@ -130,7 +134,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

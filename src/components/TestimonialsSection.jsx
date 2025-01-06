@@ -5,7 +5,7 @@ import TestimonialsSectionbg3 from '../assets/TestimonialsSectionbg3.png';
 import Profile1 from '../assets/Profile1.png';
 import Profile2 from '../assets/Profile2.png';
 import Profile3 from '../assets/Profile3.png';
-
+import Star from '../assets/Star.png';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -37,13 +37,13 @@ const TestimonialsSection = () => {
 
   const products = [
     'Rocking chair ',
-    'Recliner chair ⭐',
-    'Clubchair ⭐',
-    'Chaise lounge ⭐',
-    'Rocking chair ⭐',
-    'Recliner chair ⭐',
-    'Clubchair ⭐',
-    'Chaise lounge ⭐',
+    'Recliner chair ',
+    'Clubchair ',
+    'Chaise lounge ',
+    'Rocking chair ',
+    'Recliner chair ',
+    'Clubchair ',
+    'Chaise lounge ',
   ];
 
   const [currentProducts, setCurrentProducts] = useState(products);
@@ -51,7 +51,7 @@ const TestimonialsSection = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTranslateX((prev) => prev - 300); // Smooth scrolling
+      setTranslateX((prev) => prev - 300);
 
       setTimeout(() => {
         setCurrentProducts((prevProducts) => {
@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
           updatedProducts.push(firstProduct);
           return updatedProducts;
         });
-        setTranslateX(0); // Reset position
+        setTranslateX(0);
       }, 500);
     }, 3000);
 
@@ -68,24 +68,21 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <div className="bg-[rgba(216,224,233,1)] pb-[64px]">
+    <div className="bg-[rgba(216,224,233,1)] w-full pb-[64px]">
       <div className="container mx-auto px-4">
-        {/* Testimonials Header */}
         <div className="mb-20 flex justify-center">
           <div className="bg-[#1C4166] text-[rgba(217,217,217,1)] py-3 px-8 rounded-[20px] inline-block">
-            <h2 className="text-[65px] leading-relaxed font-gidugu  font-normal">What our customers say about us</h2>
+            <h2 className="lg:text-[65px] text-3xl leading-relaxed font-gidugu font-normal">What our customers say about us</h2>
           </div>
         </div>
 
-        {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 justify-items-center">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
               className="bg-transparent border border-custom-gray w-[354px] h-[460px] rounded-3xl overflow-hidden shadow-sm flex flex-col items-center"
             >
-              {/* Background Image */}
-              <div className="h-[168px] w-[352px] relative rounded-[20px] overflow-hidden ">
+              <div className="h-[168px] w-[352px] relative rounded-[20px] overflow-hidden">
                 <img
                   src={testimonial.backgroundImage}
                   alt="Interior"
@@ -93,19 +90,17 @@ const TestimonialsSection = () => {
                 />
               </div>
 
-              {/* Profile Image */}
-              <div className="relative -top-10 ">
+              <div className="relative -top-10">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-[107px] h-[107px] rounded-full "
+                  className="w-[107px] h-[107px] rounded-full"
                 />
               </div>
 
-              {/* Testimonial Content */}
-              <div className="px-8   ">
+              <div className="px-8">
                 <h3
-                  className="text-white  px-6  place-self-center -mt-6 mb-5  bg-[#84A3BB] rounded-full "
+                  className="text-white px-6 place-self-center -mt-6 mb-5 bg-[#84A3BB] rounded-full"
                   style={{
                     fontFamily: 'Gidugu, sans-serif',
                     fontWeight: 400,
@@ -131,22 +126,23 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Scrolling Products Banner */}
-        <div className="bg-[#1C4166]  h-[140px] overflow-hidden relative">
+        <div className="bg-[#1C4166] lg:w-full  lg:h-[140px] overflow-hidden relative">
           <div
-            className="flex whitespace-nowrap transition-transform duration-500"
+            className="flex  whitespace-nowrap transition-transform duration-500"
             style={{ transform: `translateX(${translateX}px)` }}
           >
             {currentProducts.map((product, index) => (
-              <span key={index}  className="text-white  "
-              style={{
-                fontFamily: 'Gidugu, sans-serif',
-                fontWeight: 400,
-                fontSize: '80px',
-                lineHeight: '148.62px',
-              }}>
-                {product}
-              </span>
+              <div
+                key={index} 
+                className=" flex items-center justify-center gap-14"
+                
+              >
+               
+                <h1 className='text-white font-gidugu font-normal lg:text-[80px] lg:leading-[148.62px] '>{product}</h1>
+                <img src={Star} alt="Star" className="h-16 w-16 lg:mx-32 " />
+               
+                
+              </div>
             ))}
           </div>
         </div>
@@ -156,4 +152,3 @@ const TestimonialsSection = () => {
 };
 
 export default TestimonialsSection;
-

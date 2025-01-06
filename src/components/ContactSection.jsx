@@ -26,12 +26,12 @@ const ContactSection = () => {
       {/* Content */}
       <div className="relative h-full container mx-auto px-4">
         <div className="flex flex-col items-center  py-4  mx-auto text-center">
-          <h2 className="text-white text-[80px] font-normal leading-[148.33px] font-gidugu ">
+          <h2 className="text-white lg:text-[80px] text-3xl font-normal lg:leading-[148.33px] font-gidugu ">
             Connect with us for an unforgettable conversation
           </h2>
 
           {/* Email Form */}
-          <form onSubmit={handleSubmit} className="w-[307px] max-w-md">
+          <form onSubmit={handleSubmit} className="lg:w-[307px] max-w-md">
             <div className="relative">
               <input
                 type="email"

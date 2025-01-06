@@ -26,7 +26,7 @@ const NewsSection = () => {
     <div className="bg-[#D8E0E9] py-16">
       <div className="container mx-auto px-24">
         {/* Section Title */}
-        <h2 className="text-[80px] font-normal font-gidugu text-[#1C4166] text-center mb-12">
+        <h2 className="lg:text-[80px] text-4xl font-normal font-gidugu text-[#1C4166] text-center mb-12">
           News and Updates
         </h2>
 
@@ -35,7 +35,7 @@ const NewsSection = () => {
           {newsItems.map((item) => (
             <div 
               key={item.id} 
-              className="rounded-3xl w-[500px] h-[270px] overflow-hidden relative"
+              className="rounded-3xl lg:w-[500px] w-[400px] h-[270px] lg:h-[270px] overflow-hidden relative"
             >
               {/* Background Image */}
               <img
