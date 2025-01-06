@@ -23,8 +23,8 @@ const NewsSection = () => {
   ];
 
   return (
-    <div className="bg-[#D8E0E9] py-16">
-      <div className="container mx-auto px-24">
+    <div className="bg-[#D8E0E9] w-full py-16">
+      <div className="container mx-auto max-w-[1059px] ">
         {/* Section Title */}
         <h2 className="lg:text-[80px] text-4xl font-normal font-gidugu text-[#1C4166] text-center mb-12">
           News and Updates

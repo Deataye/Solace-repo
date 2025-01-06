@@ -139,7 +139,7 @@ const TestimonialsSection = () => {
               >
                
                 <h1 className='text-white font-gidugu font-normal lg:text-[80px] lg:leading-[148.62px] '>{product}</h1>
-                <img src={Star} alt="Star" className="h-16 w-16 lg:mx-24 " />
+                <img src={Star} alt="Star" className="h-10 w-10 lg:mx-24 " />
                
                 
               </div>
