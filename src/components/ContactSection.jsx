@@ -17,7 +17,7 @@ const ContactSection = () => {
         <img
           src={ContactSectionbg}
           alt="Modern navy sofa with wooden frame"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-center object-cover"
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-gray-900/10"></div>
