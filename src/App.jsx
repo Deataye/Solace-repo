@@ -1,24 +1,18 @@
-import ContactSection from "./components/ContactSection";
-import FeaturesSection from "./components/FeaturesSection";
-import Footer from "./components/Footer";
-import HeroSection from "./components/Hero";
-import InspirationSection from "./components/InspirationSection";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import NewsSection from "./components/NewsSection";
-import TestimonialsSection from "./components/TestimonialsSection";
+import HomePage from "./pages/Homepage"; // Ensure this file exists
+import ServicesPage from "./pages/ServicesPage"; // Ensure this file exists
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <HeroSection/>
-      <InspirationSection/>
-      <TestimonialsSection/>
-      <FeaturesSection/>
-      <ContactSection/>
-      <NewsSection/>
-      <Footer/>
-    </>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
+      </Routes>
+    </Router>
   );
 }
 
