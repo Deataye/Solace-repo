@@ -45,7 +45,7 @@ const TopCategories = () => {
   ];
 
   return (
-    <div className="bg-[#D8E0E9] py-8 md:py-16">
+    <div className="bg-[#D8E0E9] py-8 md:mt-14 md:py-32">
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <h2 className="text-[#1C4166] text-3xl md:text-[55px] font-gidugu font-normal mb-6 md:mb-10 text-start">

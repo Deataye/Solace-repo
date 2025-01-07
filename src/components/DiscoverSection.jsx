@@ -23,12 +23,12 @@ const DiscoverSection = () => {
 
   return (
     <div
-      className="relative bg-cover bg-center lg:h-screen"
+      className="relative bg-cover bg-center lg:h-screen "
       style={{ backgroundImage: `url(${Discoverbg})` }}
     >
       {/* Hero Content */}
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-      <div className="container mx-auto px-4 relative z-10 text-white py-16">
+      <div className="container lg:h-screen mx-auto px-4 relative z-10 text-white py-16">
         <h1 className="lg:text-[96px] text-[40px] font-gidugu font-normal">
           Discover Timeless Comfort
         </h1>
@@ -41,7 +41,7 @@ const DiscoverSection = () => {
       </div>
 
       {/* Categories */}
-      <div className="bg-[#1C4166] hidden lg:block py-2">
+      <div className="bg-[#1C4166] hidden lg:relative lg:block py-2">
         <div className="container mx-auto  grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
           {categories.map((category, index) => (
             <div

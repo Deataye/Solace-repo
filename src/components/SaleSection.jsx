@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import sale1 from "../assets/sale1.png";
 import sale2 from "../assets/sale2.png";
 import sale3 from "../assets/sale3.png";
@@ -10,6 +11,7 @@ import chair4 from "../assets/chair4.jpeg";
 import saleicon from "../assets/saleicon.png";
 
 const SaleSection = () => {
+  const navigate = useNavigate();
   const saleItems = [
     { id: 1, name: "Duyvis Rattan Dining Chair", price: "Rs.42,100", originalPrice: "Rs.65,500", image: chair1, discount: saleicon },
     { id: 2, name: "Duyvis Rattan Dining Chair", price: "Rs.42,100", originalPrice: "Rs.65,500", image: chair2, discount: saleicon },
@@ -61,7 +63,7 @@ const SaleSection = () => {
                     {item.originalPrice}
                   </span>
                 </p>
-                <button className="mt-3 md:mt-4 bg-[#D8E0E9] text-[#1C4166] border border-[#1C4166] text-xs py-2 px-4 rounded-full hover:text-white hover:bg-[#142b4a] w-full md:w-auto">
+                <button className="mt-3 md:mt-4 bg-[#D8E0E9] text-[#1C4166] border border-[#1C4166] text-xs py-2 px-4 rounded-full hover:text-white hover:bg-[#142b4a] w-full md:w-auto" onClick={() => navigate(`/product/${item.id}`)}>
                   Add to cart
                 </button>
               </div>
