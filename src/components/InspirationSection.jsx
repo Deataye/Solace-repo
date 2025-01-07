@@ -4,7 +4,7 @@ import InspirationSection2 from '../assets/InspirationSection2.png';
 
 const InspirationSection = () => {
   return (
-    <div className="bg-[rgba(216,224,233,1)] pt-3 w-full lg:pt-40 pb-0  ">
+    <div className="bg-[rgba(216,224,233,1)] pt-3 w-full lg:pt-0 pb-0  ">
       <div className="container lg:mx-auto  lg:max-w-[1059px] py-20">
         <div className="flex flex-col ">
           {/* First Section */}
