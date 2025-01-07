@@ -35,7 +35,7 @@ const NewsSection = () => {
           {newsItems.map((item) => (
             <div 
               key={item.id} 
-              className="rounded-3xl lg:w-[500px] w-[400px] h-[270px] lg:h-[270px] overflow-hidden relative"
+              className="rounded-3xl lg:w-[500px] w-[390px] h-[270px] lg:h-[270px] overflow-hidden relative"
             >
               {/* Background Image */}
               <img

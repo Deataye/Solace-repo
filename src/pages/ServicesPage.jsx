@@ -9,7 +9,7 @@ import TopCategories from "../components/TopCategories";
 function ServicesPage() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
        <DiscoverSection/>
        <TopCategories/>
        <SaleSection/>

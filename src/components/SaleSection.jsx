@@ -29,29 +29,29 @@ const SaleSection = () => {
   ];
 
   return (
-    <div className="bg-[#D8E0E9] py-10">
+    <div className="bg-[#D8E0E9] py-6 md:py-10">
       {/* Sale Section */}
-      <div className="container max-w-[1442px] mx-auto  px-4">
-        <h2 className="text-[#1C4166] text-[55px] font-gidugu font-normal mb-8">Sale</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8    space-x-2">
+      <div className="container max-w-[1442px] mx-auto px-4">
+        <h2 className="text-[#1C4166] text-3xl md:text-[55px] font-gidugu font-normal mb-4 md:mb-8">Sale</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-4 md:gap-6">
           {saleItems.map((item) => (
             <div
               key={item.id}
-              className="bg-[#D8E0E9] border border-gray-300   h-[307px] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              className="bg-[#D8E0E9] border border-gray-300 h-auto md:h-[307px] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="relative">
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-[150px] object-cover"
+                  className="w-full h-[200px] md:h-[150px] object-cover"
                 />
                 <img
                   src={item.discount}
                   alt="Sale Icon"
-                  className="absolute top-0 right-0 w-[55px] h-[60px]"
+                  className="absolute top-0 right-0 w-[45px] h-[50px] md:w-[55px] md:h-[60px]"
                 />
               </div>
-              <div className="p-4">
+              <div className="p-3 md:p-4">
                 <h3 className="text-[#1C4166] text-sm font-semibold mb-2">
                   {item.name}
                 </h3>
@@ -61,7 +61,7 @@ const SaleSection = () => {
                     {item.originalPrice}
                   </span>
                 </p>
-                <button className="mt-4 bg-[#D8E0E9] text-[#1C4166] border border-[#1C4166] text-xs py-2 px-4 rounded-full hover:text-white hover:bg-[#142b4a]">
+                <button className="mt-3 md:mt-4 bg-[#D8E0E9] text-[#1C4166] border border-[#1C4166] text-xs py-2 px-4 rounded-full hover:text-white hover:bg-[#142b4a] w-full md:w-auto">
                   Add to cart
                 </button>
               </div>
@@ -71,16 +71,20 @@ const SaleSection = () => {
       </div>
 
       {/* Featured In Section */}
-      <div className="bg-[#1C4166] rounded-3xl py-10 mt-10">
-        <div className="container mx-auto w-[250px] text-center">
-          <h3 className="text-[#1C4166] bg-[#D8E0E9] rounded-full px-0 font-gidugu font-normal leading-[50px] text-[50px] mb-6">Featured in</h3>
-          <div className="flex justify-center gap-40">
+      <div className="bg-[#1C4166] rounded-xl md:rounded-3xl py-6 md:py-10 mt-6 md:mt-10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-xs md:w-[250px] mx-auto">
+            <h3 className="text-[#1C4166] bg-[#D8E0E9] rounded-full px-4 md:px-0 font-gidugu font-normal text-3xl md:text-[50px] leading-normal md:leading-[50px] mb-4 md:mb-6 text-center">
+              Featured in
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 md:flex md:justify-center gap-4 md:gap-40 max-w-4xl mx-auto">
             {featuredLogos.map((logo) => (
               <img
                 key={logo.id}
                 src={logo.logo}
                 alt="Logo"
-                className="h-[49px] w-[185px] object-contain"
+                className="h-[30px] md:h-[49px] w-full md:w-[185px] object-contain"
               />
             ))}
           </div>

@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
+    <nav className=" absolute w-full z-50 bg-transparent">
       <div className="container mx-auto flex justify-between items-center px-4 py-4">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -18,19 +23,25 @@ const Navbar = () => {
         <div className="hidden lg:flex justify-center items-center gap-8 xl:gap-16 flex-1">
           <Link
             to="/"
-            className="font-gidugu text-white text-2xl xl:text-4xl border-b-2 border-yellow-500 transition-colors duration-300"
+            className={`font-gidugu text-white text-2xl xl:text-4xl transition-colors duration-300 ${
+              isActive('/') ? 'border-b-2 border-yellow-500' : 'hover:text-yellow-500'
+            }`}
           >
             Home
           </Link>
           <Link
             to="/services"
-            className="font-gidugu text-white text-2xl xl:text-4xl hover:text-yellow-500 transition-colors duration-300"
+            className={`font-gidugu text-white text-2xl xl:text-4xl transition-colors duration-300 ${
+              isActive('/services') ? 'border-b-2 border-yellow-500' : 'hover:text-yellow-500'
+            }`}
           >
             Blog
           </Link>
           <Link
             to="/contact"
-            className="font-gidugu text-white text-2xl xl:text-4xl hover:text-yellow-500 transition-colors duration-300"
+            className={`font-gidugu text-white text-2xl xl:text-4xl transition-colors duration-300 ${
+              isActive('/contact') ? 'border-b-2 border-yellow-500' : 'hover:text-yellow-500'
+            }`}
           >
             Contact us
           </Link>
@@ -68,19 +79,25 @@ const Navbar = () => {
         <div className="bg-gray-900 px-4 py-6 space-y-4">
           <Link
             to="/"
-            className="block text-white text-lg border-b-2 border-yellow-500 py-2 transition-colors duration-300"
+            className={`block text-white text-lg py-2 transition-colors duration-300 ${
+              isActive('/') ? 'border-b-2 border-yellow-500' : 'hover:text-yellow-500'
+            }`}
           >
             Home
           </Link>
           <Link
             to="/services"
-            className="block text-white text-lg hover:text-yellow-500 py-2 transition-colors duration-300"
+            className={`block text-white text-lg py-2 transition-colors duration-300 ${
+              isActive('/services') ? 'border-b-2 border-yellow-500' : 'hover:text-yellow-500'
+            }`}
           >
             Blog
           </Link>
           <Link
             to="/contact"
-            className="block text-white text-lg hover:text-yellow-500 py-2 transition-colors duration-300"
+            className={`block text-white text-lg py-2 transition-colors duration-300 ${
+              isActive('/contact') ? 'border-b-2 border-yellow-500' : 'hover:text-yellow-500'
+            }`}
           >
             Contact us
           </Link>

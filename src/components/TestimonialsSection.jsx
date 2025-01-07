@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <div className="bg-[rgba(216,224,233,1)] w-full pb-[64px]">
+    <div className="bg-[rgba(216,224,233,1)] w-full -mt-40 lg:-mt-0 pb-[64px]">
       <div className="container mx-auto px-4">
         <div className="mb-20 flex justify-center">
           <div className="bg-[#1C4166] text-[rgba(217,217,217,1)]  px-8 rounded-[20px] inline-block">
@@ -138,8 +138,8 @@ const TestimonialsSection = () => {
                 
               >
                
-                <h1 className='text-white font-gidugu font-normal lg:text-[80px] lg:leading-[148.62px] '>{product}</h1>
-                <img src={Star} alt="Star" className="h-10 w-10 lg:mx-24 " />
+                <h1 className='text-white font-gidugu font-normal text-[50px] lg:text-[80px] lg:leading-[148.62px] '>{product}</h1>
+                <img src={Star} alt="Star" className="h-10 w-10 mx-12  lg:mx-24 " />
                
                 
               </div>

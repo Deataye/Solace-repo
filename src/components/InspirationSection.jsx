@@ -4,11 +4,11 @@ import InspirationSection2 from '../assets/InspirationSection2.png';
 
 const InspirationSection = () => {
   return (
-    <div className="bg-[rgba(216,224,233,1)] pt-32 w-full lg:pt-40 pb-0  ">
-      <div className="container mx-auto max-w-[1059px] py-20">
+    <div className="bg-[rgba(216,224,233,1)] pt-3 w-full lg:pt-40 pb-0  ">
+      <div className="container lg:mx-auto  lg:max-w-[1059px] py-20">
         <div className="flex flex-col ">
           {/* First Section */}
-          <div className="flex flex-col lg:flex-row items-center  lg:items-start  lg:gap-6">
+          <div className="flex flex-col lg:flex-row items-center mb-10 lg:mb-0 lg:items-start  lg:gap-6">
             {/* Image */}
             <div className="relative lg:w-[520px] lg:h-[411.02px]   ">
               <img
@@ -34,7 +34,7 @@ const InspirationSection = () => {
           </div>
 
           {/* Second Section */} 
-          <div className="flex flex-col lg:flex-row items-center w-[1250px] lg:items-start gap-10">
+          <div className="flex flex-col lg:flex-row items-center lg:w-[1250px] lg:items-start gap-10">
             {/* Content */}
             <div className="bg-transparent border border-custom-gray p-6 rounded-[25px]   lg:w-[790px]">
               <h2 

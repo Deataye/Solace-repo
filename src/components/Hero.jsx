@@ -10,7 +10,7 @@ const Hero = () => {
     }
     >
       {/* Hero Content */}
-      <div className="container mx-auto px-4 md:px-6 lg:px-20">
+      <div className="container mx-auto  px-4 md:px-6 lg:px-20">
         <div className="pt-24 md:pt-44 ml-0 lg:pt-10 lg:max-w-[836px] mx-auto text-left">
           <h2 
             className="text-white lg:text-[50px] text-2xl ml-5  font-gidugu"
@@ -19,7 +19,7 @@ const Hero = () => {
             Elevate your
           </h2>
           <h1 
-            className="text-white lg:text-[80px]  ml-24 font-diplomata mt-1 mb-3"
+            className="text-white lg:text-[80px]  text-[30px] lg:ml-24 font-diplomata mt-1 mb-3"
             style={{
               lineHeight: 'lg:97.36px',
               letterSpacing: '0.02em',
@@ -29,14 +29,14 @@ const Hero = () => {
             COMFORT
           </h1>
           <p 
-            className="text-white lg:text-[50px] text-2xl w-full text-center ml-36 lg:ml-[250px] font-gidugu mt-0"
+            className="text-white lg:text-[50px] text-2xl w-full text-center  lg:ml-[250px] font-gidugu mt-0"
             style={{ lineHeight: 'lg:92.7px' }}
           >
             Explore Our Seating Collection
           </p>
-          <div className="lg:py-48 ">
+          <div className="lg:py-48  ">
             <button
-              className="text-white lg:text-[50px] text-4xl font-gidugu border-b-2 border-yellow-500 hover:text-yellow-500 transition-colors pb-2"
+              className="text-white lg:text-[50px] text-3xl font-gidugu border-b-2 border-yellow-500 hover:text-yellow-500 transition-colors  lg:pb-2"
             >
               Shop Now
             </button>

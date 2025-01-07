@@ -11,7 +11,7 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="relative h-screen rounded-[20px] max-h-[600px] w-full overflow-hidden">
+    <div className="relative h-screen rounded-[20px] max-h-[300px] lg:max-h-[600px] w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 ">
         <img

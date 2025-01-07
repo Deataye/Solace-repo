@@ -23,25 +23,25 @@ const DiscoverSection = () => {
 
   return (
     <div
-      className="relative bg-cover bg-center h-screen"
+      className="relative bg-cover bg-center lg:h-screen"
       style={{ backgroundImage: `url(${Discoverbg})` }}
     >
       {/* Hero Content */}
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       <div className="container mx-auto px-4 relative z-10 text-white py-16">
-        <h1 className="lg:text-[96px] font-gidugu font-normal">
+        <h1 className="lg:text-[96px] text-[40px] font-gidugu font-normal">
           Discover Timeless Comfort
         </h1>
-        <p className="text-[24px] font-inter font-normal mb-36">
+        <p className="lg:text-[24px]  font-inter font-normal mb-20 lg:mb-36">
           Your Ultimate Furniture Destination
         </p>
-        <button className="text-white lg:text-[50px] mb-32 text-4xl font-gidugu border-b-2 border-yellow-500 hover:text-yellow-500 transition-colors">
+        <button className="text-white lg:text-[50px] lg:mb-32 text-4xl font-gidugu border-b-2 border-yellow-500 hover:text-yellow-500 transition-colors">
           Shop Now
         </button>
       </div>
 
       {/* Categories */}
-      <div className="bg-[#1C4166] py-2">
+      <div className="bg-[#1C4166] hidden lg:block py-2">
         <div className="container mx-auto  grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
           {categories.map((category, index) => (
             <div

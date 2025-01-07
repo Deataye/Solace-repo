@@ -10,7 +10,7 @@ import TestimonialsSection from "../components/TestimonialsSection";
 function HomePage() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection/>
       <InspirationSection/>
       <TestimonialsSection/>
